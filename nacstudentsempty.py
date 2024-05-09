@@ -10,7 +10,7 @@ from mlforkidsnumbers import MLforKidsNumbers
 
 
 project = MLforKidsNumbers(
-    # keys and URLs specific to your project will be added here
+    key="9bca2290-0dfc-11ef-aa55-af753b288b743a543c0e-a624-434d-976a-dcd6fee4dc45"
 )
 
 
@@ -173,6 +173,7 @@ def learn_from_this(winner, boardhistory, winnerdecisions):
         print("\nAt the start of move %d the board looked like this:" % (idx + 1))
         print(boardhistory[idx])
         print("And %s decided to put their mark in %s" % (winner, winnerdecisions[idx]))
+        add_to_train(boardhistory[idx], winner, winnerdecisions[idx])
 
 
 ############################################################################
